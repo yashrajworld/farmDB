@@ -1,0 +1,33 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+body{
+    background-color: darkcyan;
+}
+.allData{
+    max-width: 800px;
+    background-color: darkgoldenrod;
+    display: block;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(192, 235, 151);
+}
+span.header{
+    
+    font-size: 26px;
+}
+span.data{
+    font-size: 12px;
+}
+li{
+    margin-bottom: 5px;
+    display: block;
+}

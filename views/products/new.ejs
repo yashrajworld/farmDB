@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new product!</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: darkcyan;
+        }
+
+        .allData {
+            max-width: 800px;
+            margin: 5% auto;
+            background-color: darkgoldenrod;
+            display: block;
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        form {
+            margin: 5px 5px 5px 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(192, 235, 151);
+            margin: 4px;
+            border-radius: 2%;
+
+        }
+
+        span.header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        span.buttons {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        button {
+            width: 50%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="allData">
+        <h1>New Product details </h1>
+        <div class="container">
+            <form action="/new" method="post">
+                <span class="header">
+                    <label for="name">Name :<input type="text" placeholder="Name" name="name"></label>
+                    <label for="category">Category :<input type="text" placeholder="Category" name="category"></label>
+                    <label for="price">Price :<input type="text" placeholder="Price" name="price"></label>
+                </span>
+                <span class="data">
+                    <textarea name="details" id="details" cols="102" rows="10"
+                        placeholder="Enter Product details"></textarea>
+                </span>
+                <span class="buttons">
+                    <button>Add</button>
+                    <button>Back</button>
+                </span>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the farm!</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: darkcyan;
+        }
+
+        .allData {
+            max-width: 800px;
+            margin: 5% auto;
+            background-color: darkgoldenrod;
+            display: block;
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        ul {
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(192, 235, 151);
+            margin: 4px;
+            border-radius: 5%;
+
+        }
+
+        span.header {
+
+            font-size: 26px;
+        }
+
+        span.data {
+            font-size: 12px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            display: block;
+            margin-left: 4px;
+            margin-right: 4px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="allData">
+        <h1>All the products : </h1>
+        <a href="/products/new" style="font-size: small;">Add more</a>
+        <ul>
+            <% for(let prod of products) {%>
+                <li>
+                    <div class="container">
+                        <span class="header">
+                            <%=prod.name %>
+                                <sup style="font-size: x-small;"><a href="/products/<%=prod._id%>/edit">(edit)</a> / <a
+                                        href="/products/<%=prod._id%>/delete">(delete)</a></sup>
+                                <hr>
+                        </span>
+                        <span class="data">
+                            <%=prod.category %> - $<%= prod.price %> %>
+                                    <hr>
+                        </span>
+                        <span class="detail">
+                            <%= prod.details%>
+                        </span>
+                    </div>
+                </li>
+                <% } %>
+        </ul>
+
+    </div>
+</body>
+
+</html>
